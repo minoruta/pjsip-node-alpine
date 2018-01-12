@@ -20,7 +20,7 @@ RUN apk add --no-cache --virtual .build4pjsip \
       --disable-sdl \
       --disable-speex-aec \
       --disable-video \
-      --prefix=/usr \
+      --prefix=/usr/local \
       > /dev/null \
     && make dep \
     && make \
