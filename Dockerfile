@@ -10,7 +10,7 @@ RUN apk add --no-cache --virtual .build4pjsip \
     openssl-dev \
     opus-dev \
     && cd \
-    && wget -nv "http://www.pjsip.org/release/$VERSION_PJSIP/pjproject-$VERSION_PJSIP.tar.bz2" -O - | tar xjf - \
+    && wget -qnv "http://www.pjsip.org/release/$VERSION_PJSIP/pjproject-$VERSION_PJSIP.tar.bz2" -O - | tar xjf - \
     && cd pjproject-$VERSION_PJSIP \
     && ./configure \
       --with-external-srtp \
@@ -21,6 +21,7 @@ RUN apk add --no-cache --virtual .build4pjsip \
       --disable-speex-aec \
       --disable-video \
       --prefix=/usr \
+      > /dev/null \
     && make dep \
     && make \
     && make install \
