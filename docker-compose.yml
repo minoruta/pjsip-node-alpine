@@ -6,4 +6,4 @@ services:
       args:
         VERSION_NODEJS: 8.9.3-r1
         VERSION_PJSIP: 2.7.1
-    image: pjsip-node-alpine:2.7.1
+    image: minoruta/pjsip-node-alpine:2.7.1

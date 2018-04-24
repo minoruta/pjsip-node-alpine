@@ -1,4 +1,4 @@
-ARG VERSION_NODEJS=8.9.3-r1
+ARG VERSION_NODEJS=latest
 FROM minoruta/node-alpine:$VERSION_NODEJS
 MAINTAINER KINOSHITA minoru <5021543+minoruta@users.noreply.github.com>
 ARG VERSION_PJSIP=2.7.1
